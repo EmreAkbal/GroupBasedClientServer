@@ -157,7 +157,7 @@ public class CapitalizeServer {
         private void broadcastMessage(String message, int senderId) {
             String senderName = usernames.getOrDefault(senderId, "Unknown");
             String timeStamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
-            String fullMessage = timeStamp + " " + senderName + ": " + message;
+            String fullMessage = "(" + timeStamp + ")" + senderName + ": " + message;
             for (Map.Entry<Integer, ClientHandler> entry : clients.entrySet()) {
                 // Including the sender in the message broadcast
                 entry.getValue().sendMessage(fullMessage);

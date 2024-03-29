@@ -35,7 +35,7 @@ public class CapitalizeClient {
             Connection connection = connectionFactory.createConnection(serverIP, DEFAULT_PORT);
             System.out.println("Connected to the group server. Enter commands or messages. "
             		+ "\n For private message = PRIVATE_MSG \n For set coordinator = SET_COORDINATOR "
-            		+ "\n For leaving = LEAVE \n For see wjo is onnline = REQUEST_MEMBERS \n For send a message = MSG (or directly wrie message)");
+            		+ "\n For leaving = LEAVE \n For see who is online / id numbers = REQUEST_MEMBERS \n For send a message = MSG (or directly write message)");
 
             MessageHandler messageHandler = messageHandlerFactory.createHandler(connection.getSocket(), username);
 

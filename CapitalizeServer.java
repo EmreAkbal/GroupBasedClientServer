@@ -25,6 +25,7 @@ public class CapitalizeServer {
     // Private constructor to prevent instantiation design pattern 
     private CapitalizeServer() {}
     
+    // Singleton server providing a single point of communication.
     public static synchronized CapitalizeServer getInstance() {
         if (instance == null) {
             instance = new CapitalizeServer();
